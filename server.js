@@ -1,6 +1,10 @@
+require('dotenv').config()
 const express = require('express');
 const morgan = require('morgan');
 const app = express();
+
+console.log(process.env.API_TOKEN)
+
 app.use(morgan('dev'));
 
 //valid types of pokemon
