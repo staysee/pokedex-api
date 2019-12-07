@@ -18,7 +18,7 @@ app.use(function validateBearerToken(req, res, next) {
     const authToken = req.get('Authorization')
     
     console.log('validate bearer token middleware')
-    
+
     if (!authToken || authToken.split(' ')[1] !== apiToken){
         return res.status(401).json({ error: 'Unauthorized request' })
     }
@@ -55,7 +55,7 @@ app.get('/pokemon', function handleGetPokemon(req, res) {
 })
 
 
-const PORT = 8080;
+const PORT = 8000;
 
 app.listen(PORT, () => {
     console.log(`Server listening on http://localhost:${PORT}`)
